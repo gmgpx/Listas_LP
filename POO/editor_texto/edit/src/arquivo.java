@@ -13,10 +13,11 @@ class Arquivo {
         this.tamanho = 0;
     }
 
-    public void abrir() {
-        System.out.println("Abrindo arquivo: " + this.nome);
-        System.out.println("Conteúdo: " + this.conteudo);
-        System.out.println("Tamanho: " + this.tamanho + " bits\n");
+    @Override
+    public String toString() {
+        return "\nNome: '" + nome + '\'' +
+                "\nTamanho: " + tamanho +
+                "\nConteudo: '" + conteudo + '\'' + "\n";
     }
 
     public void editar() {
@@ -27,14 +28,15 @@ class Arquivo {
     }
 
     public void renomear() {
-        System.out.println("Digite o novo nome:");
+        System.out.println("Digite o novo nome do arquivo:");
         this.nome = scanner.nextLine();
         System.out.println("Arquivo renomeado para: " + this.nome + "!\n");
     }
 
     public void limpar() {
+        this.nome = "";
         this.conteudo = "";
         this.tamanho = 0;
-        System.out.println("Arquivo limpo!");
+        System.out.println("Arquivo limpo com sucesso!\n");
     }
 }

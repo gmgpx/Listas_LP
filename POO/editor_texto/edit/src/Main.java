@@ -1,21 +1,19 @@
-import java.util.Scanner;
-
 public class Main{
     public static void main(String[] args) {
         Arquivo arquivo = new Arquivo();
 
-        arquivo.abrir();
+        System.out.println(arquivo);
 
         arquivo.renomear();
 
-        arquivo.abrir();
+        System.out.println(arquivo);
 
         arquivo.editar();
 
-        arquivo.abrir();
+        System.out.println(arquivo);
 
         arquivo.limpar();
 
-        arquivo.abrir();
+        System.out.println(arquivo);
     }
 }
